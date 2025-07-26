@@ -1,5 +1,49 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+button {
+  background-color: pink;
+  box-shadow: 1px 2px 8px rgb(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: none;
+  padding: 20px 40px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+
+button::before {
+  content: "";
+  background-color: MediumSeaGreen;
+  border-radius: 50%;
+  width: 0px;
+  height: 0px;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: var(--xPos);
+  left: var(--yPos);
+  transition: all 0.6s;
+}
+
+button:hover::before {
+  width: 400px;
+  height: 400px;
 }
