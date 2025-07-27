@@ -8,6 +8,10 @@
 
 body {
   background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 button {
@@ -15,12 +19,10 @@ button {
   box-shadow: 1px 2px 8px rgb(0, 0, 0, 0.3);
   border-radius: 5px;
   border: none;
-  padding: 20px 40px;
+  padding: 22px 62px;
+  cursor: pointer;
 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   overflow: hidden;
 }
 
@@ -38,12 +40,12 @@ button::before {
 
   position: absolute;
   transform: translate(-50%, -50%);
-  top: var(--xPos);
-  left: var(--yPos);
-  transition: all 0.6s;
+  top: var(--yPos);
+  left: var(--xPos);
+  transition: width 0.5s, height 0.5s;
 }
 
 button:hover::before {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
