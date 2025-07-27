@@ -19,7 +19,7 @@ button {
   box-shadow: 1px 2px 8px rgb(0, 0, 0, 0.3);
   border-radius: 5px;
   border: none;
-  padding: 22px 62px;
+  padding: 20px 40px;
   cursor: pointer;
 
   position: relative;
@@ -33,7 +33,7 @@ button span {
 
 button::before {
   content: "";
-  background-color: MediumSeaGreen;
+  background-color: tomato;
   border-radius: 50%;
   width: 0px;
   height: 0px;
